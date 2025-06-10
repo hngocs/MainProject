@@ -37,4 +37,7 @@ public class SQLiteConnector {
     public void setDatabase(SQLiteDatabase database) {
         this.database = database;
     }
+    //Them tu file Payment Method
+    public void closeDatabase() {
+    }
 }
