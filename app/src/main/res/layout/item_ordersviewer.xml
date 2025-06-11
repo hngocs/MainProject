@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtOrderCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDD8B6"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtOrderDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECF2B6"
+        android:text="TextView"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtEmployeeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C7F2B6"
+        android:text="TextView"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtCustomerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B6F2EF"
+        android:text="TextView"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtTotalOrderValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="4dip"
+        android:background="#B6D7F2"
+        android:text="TextView"
+        android:textSize="16sp" />
+
+</LinearLayout>
