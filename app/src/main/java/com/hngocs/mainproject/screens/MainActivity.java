@@ -11,9 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
 import com.hngocs.mainproject.R;
 
 public class MainActivity extends AppCompatActivity {
+
     ImageView imgEmployee;
     TextView txtEmployee;
 
@@ -32,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView imgOrder;
     TextView txtOrder;
 
+    ImageView imgTelephony;
+    TextView txtTelephony;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
     private void addEvents() {
         imgEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+                //gọi code mở màn hình quản trị nhân sự
                 openEmployeeManagementActivity();
             }
         });
@@ -122,16 +128,38 @@ public class MainActivity extends AppCompatActivity {
                 openOrdersViewerActivity();
             }
         });
+
+        imgTelephony.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTelephonyActivity();
+            }
+        });
+        txtTelephony.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTelephonyActivity();
+            }
+        });
+    }
+
+    private void openTelephonyActivity() {
+        Intent intent=new Intent(MainActivity.this,
+                TelephonyActivity.class);
+        startActivity(intent);
     }
 
     private void openOrdersViewerActivity() {
-        Intent intent=new Intent(MainActivity.this, OrdersViewerActivity.class);
+        Intent intent=new Intent(MainActivity.this,
+                OrdersViewerActivity.class);
         startActivity(intent);
     }
 
     private void openPaymentMethodActivity() {
-        Intent intent=new Intent(MainActivity.this, PaymentMethodActivity.class);
+        Intent intent=new Intent(MainActivity.this,
+                PaymentMethodActivity.class);
         startActivity(intent);
+
     }
 
     private void openAdvancedProductManagementActivity() {
@@ -144,13 +172,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void openCustomerManagementActivity() {
-        Intent intent=new Intent(MainActivity.this, CustomerManagementActivity.class);
+    void openEmployeeManagementActivity()
+    {
+        Intent intent=new Intent(MainActivity.this, EmployeeManagementActivity.class);
         startActivity(intent);
     }
-
-    private void openEmployeeManagementActivity() {
-        Intent intent=new Intent(MainActivity.this, EmployeeManagementActivity.class);
+    void openCustomerManagementActivity()
+    {
+        Intent intent=new Intent(MainActivity.this, CustomerManagementActivity.class);
         startActivity(intent);
     }
 
@@ -167,5 +196,8 @@ public class MainActivity extends AppCompatActivity {
         txtPaymentMethod=findViewById(R.id.txtPaymentMethod);
         imgOrder=findViewById(R.id.imgOrder);
         txtOrder=findViewById(R.id.txtOrder);
+        imgTelephony=findViewById(R.id.imgTelephony);
+        txtTelephony=findViewById(R.id.txtTelephony);
     }
+
 }

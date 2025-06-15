@@ -1,6 +1,8 @@
 package com.hngocs.mainproject.screens;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -67,7 +69,8 @@ public class CustomerManagementActivity extends AppCompatActivity {
     private void displayCustomerDetailActivity(Customer c) {
         Intent intent=new Intent(CustomerManagementActivity.this,CustomerDetailActivity.class);
         intent.putExtra("SELECTED_CUSTOMER",c);
-        startActivity(intent);
+        //startActivity(intent);
+        startActivityForResult(intent,400);
     }
 
     private void addViews() {
@@ -127,23 +130,55 @@ public class CustomerManagementActivity extends AppCompatActivity {
             Customer c= (Customer) data.getSerializableExtra("NEW_CUSTOMER");
             process_save_customer(c);
         }
+        else if(requestCode==400 && resultCode==500)
+        {//cập nhật dữ liệu cho Customer
+            //làm sau
+            //lấy gói tin ra:
+            Customer c= (Customer) data.getSerializableExtra("NEW_CUSTOMER");
+            process_save_update_customer(c);
+        }
+        else if(requestCode==400 && resultCode==600)
+        {
+            String id=data.getStringExtra("CUSTOMER_ID_REMOVE");
+            //GỌI CUSTOMER CONNECTOR sau nha
+            process_remove_customer(id);
+        }
+    }
+
+    private void process_remove_customer(String id) {
+        SQLiteConnector con=new SQLiteConnector(this);
+        SQLiteDatabase database=con.openDatabase();
+        CustomerConnector cc=new CustomerConnector();
+        long flag=cc.removeCustomer(id,database);
+        if(flag>0)
+        {
+            adapter.clear();
+            adapter.addAll(cc.getAllCustomers(database).getCustomers());
+        }
+    }
+
+    private void process_save_update_customer(Customer c) {
+        SQLiteConnector con=new SQLiteConnector(this);
+        SQLiteDatabase database=con.openDatabase();
+        CustomerConnector cc=new CustomerConnector();
+        long flag=cc.saveUpdateCustomer(c,database);
+        Toast.makeText(this,"FLAG="+flag,Toast.LENGTH_LONG).show();
+        if(flag>0)
+        {
+            adapter.clear();
+            adapter.addAll(cc.getAllCustomers(database).getCustomers());
+        }
     }
 
     private void process_save_customer(Customer c) {
-        boolean result=connector.isExist(c);
-        if(result==true)
+        SQLiteConnector con=new SQLiteConnector(this);
+        SQLiteDatabase database=con.openDatabase();
+        CustomerConnector cc=new CustomerConnector();
+        long flag=cc.saveNewCustomer(c,database);
+        if(flag>0)
         {
-            //tức là customer này đã tồn tại trong hệ thống
-            //họ có nhu cầu sửa các thông tin khác, ví dụ:
-            //ĐỊA CHỈ, PAYMENT METHOD...
-            //Sinh viên tự xử lý trường hợp sửa thông tin
-        }
-        else
-        {
-            //là thêm mới Customer vì chưa tồn tại:
-            connector.addCustomer(c);
             adapter.clear();
-            adapter.addAll(connector.get_all_customers());
+            adapter.addAll(cc.getAllCustomers(database).getCustomers());
         }
     }
 }
