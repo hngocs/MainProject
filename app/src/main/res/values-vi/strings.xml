@@ -38,4 +38,10 @@
     <string name="title_payment_method">Phương thức thanh toán</string>
     <string name="title_orders">Đơn hàng</string>
     <string name="title_telephony">Danh bạ</string>
+    <string name="title_ordersviewer_detail">Chi tiet hoá đơn </string>
+    <string name="title_ordersviewer_detail_id">ID</string>
+    <string name="title_ordersviewer_detail_code">Mã đơn hàng</string>
+    <string name="title_ordersviewer_detail_employee_name">Tên nhân viên</string>
+    <string name="title_ordersviewer_detail_customer_name">Tên khách hàng </string>
+    <string name="title_ordersviewer_detail_total_value">Tong gia tri don hang </string>
 </resources>

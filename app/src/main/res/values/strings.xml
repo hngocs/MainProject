@@ -38,4 +38,10 @@
     <string name="title_payment_method">Payment Method</string>
     <string name="title_orders">Orders</string>
     <string name="title_telephony">Telephony</string>
+    <string name="title_ordersviewer_detail">Order viewer detail</string>
+    <string name="title_ordersviewer_detail_id">ID</string>
+    <string name="title_ordersviewer_detail_code">Code</string>
+    <string name="title_ordersviewer_detail_employee_name">Employee Name</string>
+    <string name="title_ordersviewer_detail_customer_name">Customer name</string>
+    <string name="title_ordersviewer_detail_total_value">Total value</string>
 </resources>
