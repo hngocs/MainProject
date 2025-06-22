@@ -52,7 +52,7 @@ public class TelephonyInforAdapter extends ArrayAdapter<TelephonyInfor>
         imgDialUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((TelephonyActivity)context).dialUpCall(ti);
+                ((TelephonyActivity)context).dialupCall(ti);
             }
         });
 

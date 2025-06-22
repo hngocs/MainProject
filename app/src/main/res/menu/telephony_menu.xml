@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_all_contacts"
+        android:title="Tất cả liên hệ" />
+    <item
+        android:id="@+id/menu_viettel"
+        android:title="Lọc Viettel" />
+    <item
+        android:id="@+id/menu_mobifone"
+        android:title="Lọc Mobifone" />
+    <item
+        android:id="@+id/menu_other_networks"
+        android:title="Lọc Nhà mạng khác" />
+</menu>
