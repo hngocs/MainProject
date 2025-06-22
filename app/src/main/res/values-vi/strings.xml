@@ -38,10 +38,14 @@
     <string name="title_payment_method">Phương thức thanh toán</string>
     <string name="title_orders">Đơn hàng</string>
     <string name="title_telephony">Danh bạ</string>
-    <string name="title_ordersviewer_detail">Chi tiet hoá đơn </string>
-    <string name="title_ordersviewer_detail_id">ID</string>
-    <string name="title_ordersviewer_detail_code">Mã đơn hàng</string>
-    <string name="title_ordersviewer_detail_employee_name">Tên nhân viên</string>
-    <string name="title_ordersviewer_detail_customer_name">Tên khách hàng </string>
-    <string name="title_ordersviewer_detail_total_value">Tong gia tri don hang </string>
+    <string name="title_contact_name">Contact Name:</string>
+    <string name="title_phone_number">Phone Number:</string>
+    <string name="title_body">Body:</string>
+    <string name="title_multi_threading">Multi-Threading</string>
+    <string name="title_handler_send_message">Handler Send Message</string>
+    <string name="title_handler_post_message">Handler Post Message</string>
+    <string name="title_asynctask">AsyncTask</string>
+    <string name="title_draw">Draw</string>
+    <string name="title_number_of_customer">Number of Customer:</string>
+    <string name="title_load_customer">Load Customer</string>
 </resources>

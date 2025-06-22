@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.HandlerPostMessageActivity">
+    <TextView android:id="@+id/textView14" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/title_number_of_customer" android:textSize="24sp"/>
+    <EditText android:id="@+id/edtNumberOfCustomer" android:layout_width="match_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="number"/>
+    <Button android:id="@+id/btnLoadCustomer" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/title_load_customer"/>
+    <TextView android:id="@+id/txtPercent" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0%" android:textAlignment="center" android:textSize="24sp"/>
+    <ProgressBar android:id="@+id/progressBarPercent" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <ListView android:id="@+id/lvCustomer" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

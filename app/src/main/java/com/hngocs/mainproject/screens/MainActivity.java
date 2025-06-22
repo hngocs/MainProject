@@ -14,6 +14,18 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.hngocs.mainproject.R;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView imgEmployee;
@@ -36,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView imgTelephony;
     TextView txtTelephony;
+
+    ImageView imgMultiThreading;
+    TextView txtMultiThreading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +156,24 @@ public class MainActivity extends AppCompatActivity {
                 openTelephonyActivity();
             }
         });
+        imgMultiThreading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMultiThreadingCategoriesActivity();
+            }
+        });
+        txtMultiThreading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMultiThreadingCategoriesActivity();
+            }
+        });
+    }
+
+    private void openMultiThreadingCategoriesActivity() {
+        Intent intent=new Intent(MainActivity.this,
+                MultiThreadingCategoriesActivity.class);
+        startActivity(intent);
     }
 
     private void openTelephonyActivity() {
@@ -198,6 +231,8 @@ public class MainActivity extends AppCompatActivity {
         txtOrder=findViewById(R.id.txtOrder);
         imgTelephony=findViewById(R.id.imgTelephony);
         txtTelephony=findViewById(R.id.txtTelephony);
+        imgMultiThreading=findViewById(R.id.imgMultiThreading);
+        txtMultiThreading=findViewById(R.id.txtMultiThreading);
     }
 
 }

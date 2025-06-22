@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Main Project</string>
+    <string name="app_name">K22411CSampleProject</string>
     <string name="title_login_user_name">User name:</string>
     <string name="title_login_user_name_hint">Enter your user name</string>
     <string name="title_login_password">Password:</string>
@@ -38,10 +38,14 @@
     <string name="title_payment_method">Payment Method</string>
     <string name="title_orders">Orders</string>
     <string name="title_telephony">Telephony</string>
-    <string name="title_ordersviewer_detail">Order viewer detail</string>
-    <string name="title_ordersviewer_detail_id">ID</string>
-    <string name="title_ordersviewer_detail_code">Code</string>
-    <string name="title_ordersviewer_detail_employee_name">Employee Name</string>
-    <string name="title_ordersviewer_detail_customer_name">Customer name</string>
-    <string name="title_ordersviewer_detail_total_value">Total value</string>
+    <string name="title_contact_name">Contact Name:</string>
+    <string name="title_phone_number">Phone Number:</string>
+    <string name="title_body">Body:</string>
+    <string name="title_multi_threading">Multi-Threading</string>
+    <string name="title_handler_send_message">Handler Send Message</string>
+    <string name="title_handler_post_message">Handler Post Message</string>
+    <string name="title_asynctask">AsyncTask</string>
+    <string name="title_draw">Draw</string>
+    <string name="title_number_of_customer">Number of Customer:</string>
+    <string name="title_load_customer">Load Customer</string>
 </resources>

@@ -2,7 +2,9 @@ package com.hngocs.mainproject.models;
 
 import androidx.annotation.NonNull;
 
-public class TelephonyInfor {
+import java.io.Serializable;
+
+public class TelephonyInfor implements Serializable {
 
     private String name;
     private String phone;
@@ -37,4 +39,3 @@ public class TelephonyInfor {
         return this.name+"\n"+this.phone;
     }
 }
-

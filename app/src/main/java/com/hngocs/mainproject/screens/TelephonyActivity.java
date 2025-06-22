@@ -17,12 +17,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.hngocs.mainproject.R;
+import com.hngocs.mainproject.adapters.TelephonyInforAdapter;
 import com.hngocs.mainproject.models.TelephonyInfor;
 
 public class TelephonyActivity extends AppCompatActivity {
 
     ListView lvTelephony;
-    ArrayAdapter<TelephonyInfor> adapter;
+    //ArrayAdapter<TelephonyInfor> adapter;
+    TelephonyInforAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +83,23 @@ public class TelephonyActivity extends AppCompatActivity {
 
     private void addViews() {
         lvTelephony=findViewById(R.id.lvTelephonyInfor);
-        adapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        //adapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        adapter=new TelephonyInforAdapter(this,R.layout.item_telephony_infor);
         lvTelephony.setAdapter(adapter);
+    }
+
+    public void directCall(TelephonyInfor ti)
+    {
+        Uri uri=Uri.parse("tel:"+ti.getPhone());
+        Intent intent=new Intent(Intent.ACTION_CALL);
+        intent.setData(uri);
+        startActivity(intent);
+    }
+    public void dialupCall(TelephonyInfor ti)
+    {
+        Uri uri=Uri.parse("tel:"+ti.getPhone());
+        Intent intent=new Intent(Intent.ACTION_DIAL);
+        intent.setData(uri);
+        startActivity(intent);
     }
 }
